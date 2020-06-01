@@ -26,8 +26,8 @@
 			<repos/>
 			<distroRequires>
 				<and>
-					<distro_family op="=" value="RedHatEnterpriseLinux8"/>
-					<distro_variant op="=" value="BaseOS"/>
+					<distro_family op="=" value="Fedora32"/>
+					<distro_variant op="=" value="Everything"/>
 					<distro_name op="=" value=""/>
 					<distro_arch op="=" value="x86_64"/>
 					<distro_tag op="=" value=""/>
@@ -77,8 +77,8 @@
 			<repos/>
 			<distroRequires>
 				<and>
-					<distro_family op="=" value="RedHatEnterpriseLinux8"/>
-					<distro_variant op="=" value="BaseOS"/>
+					<distro_family op="=" value="Fedora32"/>
+					<distro_variant op="=" value="Everything"/>
 					<distro_name op="=" value=""/>
 					<distro_arch op="=" value="x86_64"/>
 					<distro_tag op="=" value=""/>
