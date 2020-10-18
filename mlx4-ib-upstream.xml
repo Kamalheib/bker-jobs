@@ -1,0 +1,87 @@
+<job retention_tag="scratch" group="rdma-users">
+	<whiteboard>MLX4 IB | RDMA sanity | Upstream </whiteboard>
+	<recipeSet priority="Urgent">
+		<recipe whiteboard="1st machine" role="N1" ks_meta="redhat_ca_cert harness='restraint-rhts beakerlib-redhat' selinux=--disabled" kernel_options="" kernel_options_post="">
+			<autopick random="false"/>
+			<watchdog panic="ignore"/>
+			<packages/>
+			<ks_appends>
+				<ks_append><![CDATA[
+					%post
+					%end
+					]]></ks_append>
+			</ks_appends>
+			<repos/>
+			<distroRequires>
+				<and>
+					<distro_family op="=" value="Fedorarawhide"/>
+					<distro_variant op="=" value="Everything"/>
+					<distro_name op="=" value=""/>
+					<distro_arch op="=" value="x86_64"/>
+					<distro_tag op="=" value=""/>
+				</and>
+			</distroRequires>
+			<hostRequires>
+				<and>
+					<hostname op="=" value="rdma-perf-00.lab.bos.redhat.com"/>
+					<system_type op="=" value="Machine"/>
+				</and>
+			</hostRequires>
+			<partitions>
+				<partition name="/mnt/rdma-ext4" size="25" type="part" fs="ext4"/>
+				<partition name="/mnt/rdma-xfs" size="25" type="part" fs="xfs"/>
+			</partitions>
+			<task name="/distribution/check-install" role="standalone">
+				<fetch url="https://github.com/beaker-project/beaker-core-tasks/archive/master.zip#check-install"/>
+			</task>
+			<task name="/kernel/infiniband/env_setup" role="SERVERS">
+				<params>
+					<param name="ENV_DRIVER" value=""/>
+					<param name="ENV_NETWORK" value="ib0"/>
+				</params>
+			</task>
+			<task name="/kernel/infiniband/sanity" role="SERVERS"/>
+		</recipe>
+		<recipe whiteboard="2nd machine" role="N2" ks_meta="redhat_ca_cert harness='restraint-rhts beakerlib-redhat' selinux=--disabled" kernel_options="" kernel_options_post="">
+			<autopick random="false"/>
+			<watchdog panic="ignore"/>
+			<packages/>
+			<ks_appends>
+				<ks_append><![CDATA[
+					%post
+					%end
+					]]></ks_append>
+			</ks_appends>
+			<repos/>
+			<distroRequires>
+				<and>
+					<distro_family op="=" value="Fedorarawhide"/>
+					<distro_variant op="=" value="Everything"/>
+					<distro_name op="=" value=""/>
+					<distro_arch op="=" value="x86_64"/>
+					<distro_tag op="=" value=""/>
+				</and>
+			</distroRequires>
+			<hostRequires>
+				<and>
+					<hostname op="=" value="rdma-perf-01.lab.bos.redhat.com"/>
+					<system_type op="=" value="Machine"/>
+				</and>
+			</hostRequires>
+			<partitions>
+				<partition name="/mnt/rdma-ext4" size="25" type="part" fs="ext4"/>
+				<partition name="/mnt/rdma-xfs" size="25" type="part" fs="xfs"/>
+			</partitions>
+			<task name="/distribution/check-install" role="STANDALONE">
+				<fetch url="https://github.com/beaker-project/beaker-core-tasks/archive/master.zip#check-install"/>
+			</task>
+			<task name="/kernel/infiniband/env_setup" role="CLIENTS">
+				<params>
+					<param name="ENV_DRIVER" value=""/>
+					<param name="ENV_NETWORK" value="ib0"/>
+				</params>
+			</task>
+			<task name="/kernel/infiniband/sanity" role="CLIENTS"/>
+		</recipe>
+	</recipeSet>
+</job>
