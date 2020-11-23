@@ -45,7 +45,7 @@
 				<partition name="/mnt/rdma-xfs" size="25" type="part" fs="xfs"/>
 			</partitions>
 			<task name="/distribution/install" role="STANDALONE"/>
-			<task name="/kernel/infiniband/env_setup" role="SERVERS">
+			<task name="/kernel/infiniband/env_setup_dynamic" role="SERVERS">
 				<params>
 					<param name="ENV_DRIVER" value=""/>
 					<param name="ENV_NETWORK" value="roce"/>
@@ -98,7 +98,7 @@
 				<partition name="/mnt/rdma-xfs" size="25" type="part" fs="xfs"/>
 			</partitions>
 			<task name="/distribution/install" role="STANDALONE"/>
-			<task name="/kernel/infiniband/env_setup" role="CLIENTS">
+			<task name="/kernel/infiniband/env_setup_dynamic" role="CLIENTS">
 				<params>
 					<param name="ENV_DRIVER" value=""/>
 					<param name="ENV_NETWORK" value="roce"/>
