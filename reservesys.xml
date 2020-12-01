@@ -33,6 +33,13 @@
 				<partition fs="xfs" name="/mnt/rdma-xfs" size="25" type="part"/>
 			</partitions>
 			<task name="/distribution/install" role="STANDALONE"/>
+			<task name="/kernel/distribution/upstream-kernel/install" role="STANDALONE">
+				<params>
+					<param name="KERNEL_GIT_REPO" value="https://github.com/torvalds/linux.git"/>
+					<param name="KERNEL_GIT_COMMIT" value="v5.11"/>
+					<param name="ABORT_IF_FAIL" value="yes"/>
+				</params>
+			</task>
 			<task name="/kernel/infiniband/env_setup" role="SERVERS">
 				<params>
 					<param name="ENV_DRIVER" value=""/>
@@ -76,6 +83,13 @@
 				<partition fs="xfs" name="/mnt/rdma-xfs" size="25" type="part"/>
 			</partitions>
 			<task name="/distribution/install" role="STANDALONE"/>
+			<task name="/kernel/distribution/upstream-kernel/install" role="STANDALONE">
+				<params>
+					<param name="KERNEL_GIT_REPO" value="https://github.com/torvalds/linux.git"/>
+					<param name="KERNEL_GIT_COMMIT" value="v5.11"/>
+					<param name="ABORT_IF_FAIL" value="yes"/>
+				</params>
+			</task>
 			<task name="/kernel/infiniband/env_setup" role="CLIENTS">
 				<params>
 					<param name="ENV_DRIVER" value=""/>
