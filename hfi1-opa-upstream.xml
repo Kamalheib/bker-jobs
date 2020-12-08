@@ -23,7 +23,7 @@
 			</distroRequires>
 			<hostRequires>
 				<and>
-					<hostname op="=" value="rdma-qe-14.lab.bos.redhat.com"/>
+					<hostname op="=" value="rdma-cki-04.lab.bos.redhat.com"/>
 					<system_type op="=" value="Machine"/>
 				</and>
 			</hostRequires>
@@ -34,7 +34,7 @@
 			<task name="/distribution/check-install" role="STANDALONE">
 				<fetch url="https://github.com/beaker-project/beaker-core-tasks/archive/master.zip#check-install"/>
 			</task>
-			<task name="/kernel/infiniband/env_setup" role="SERVERS">
+			<task name="/kernel/infiniband/env_setup_dynamic" role="SERVERS">
 				<params>
 					<param name="ENV_DRIVER" value=""/>
 					<param name="ENV_NETWORK" value="opa0"/>
@@ -64,7 +64,7 @@
 			</distroRequires>
 			<hostRequires>
 				<and>
-					<hostname op="=" value="rdma-qe-15.lab.bos.redhat.com"/>
+					<hostname op="=" value="rdma-cki-05.lab.bos.redhat.com"/>
 					<system_type op="=" value="Machine"/>
 				</and>
 			</hostRequires>
@@ -75,7 +75,7 @@
 			<task name="/distribution/check-install" role="STANDALONE">
 				<fetch url="https://github.com/beaker-project/beaker-core-tasks/archive/master.zip#check-install"/>
 			</task>
-			<task name="/kernel/infiniband/env_setup" role="CLIENTS">
+			<task name="/kernel/infiniband/env_setup_dynamic" role="CLIENTS">
 				<params>
 					<param name="ENV_DRIVER" value=""/>
 					<param name="ENV_NETWORK" value="opa0"/>
