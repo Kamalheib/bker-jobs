@@ -34,7 +34,7 @@
 			<task name="/distribution/check-install" role="standalone">
 				<fetch url="https://github.com/beaker-project/beaker-core-tasks/archive/master.zip#check-install"/>
 			</task>
-			<task name="/kernel/infiniband/env_setup" role="SERVERS">
+			<task name="/kernel/infiniband/env_setup_dynamic" role="SERVERS">
 				<params>
 					<param name="ENV_DRIVER" value="qedr"/>
 					<param name="ENV_NETWORK" value="iw"/>
@@ -75,7 +75,7 @@
 			<task name="/distribution/check-install" role="standalone">
 				<fetch url="https://github.com/beaker-project/beaker-core-tasks/archive/master.zip#check-install"/>
 			</task>
-			<task name="/kernel/infiniband/env_setup" role="CLIENTS">
+			<task name="/kernel/infiniband/env_setup_dynamic" role="CLIENTS">
 				<params>
 					<param name="ENV_DRIVER" value="qedr"/>
 					<param name="ENV_NETWORK" value="iw"/>
