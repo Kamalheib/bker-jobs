@@ -35,7 +35,7 @@
 			</distroRequires>
 			<hostRequires>
 				<and>
-					<hostname op="=" value="rdma-dev-25.lab.bos.redhat.com"/>
+					<hostname op="=" value="rdma-qe-24.lab.bos.redhat.com"/>
 					<system_type op="=" value="Machine"/>
 				</and>
 			</hostRequires>
@@ -86,7 +86,7 @@
 			</distroRequires>
 			<hostRequires>
 				<and>
-					<hostname op="=" value="rdma-dev-26.lab.bos.redhat.com"/>
+					<hostname op="=" value="rdma-qe-25.lab.bos.redhat.com"/>
 					<system_type op="=" value="Machine"/>
 				</and>
 			</hostRequires>
