@@ -17,7 +17,7 @@ whit_board = ""
 kernel_rpm = ""
 core_rpm = ""
 modules_rpm = ""
-distro_name = "RHEL-8.4.0-20210322.n.0"
+distro_name = "RHEL-8.4.0-20210331.d.2"
 
 for job in job_list:
     os.system("sed -i 's,| RDMA sanity <,| RDMA sanity | %s<,g' %s" % (whit_board, job))
