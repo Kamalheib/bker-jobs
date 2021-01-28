@@ -26,7 +26,7 @@
 			<repos/>
 			<distroRequires>
 				<and>
-					<distro_family op="=" value="Fedorarawhide"/>
+					<distro_family op="=" value="Fedora34"/>
 					<distro_variant op="=" value="Everything"/>
 					<distro_name op="=" value=""/>
 					<distro_arch op="=" value="x86_64"/>
@@ -77,7 +77,7 @@
 			<repos/>
 			<distroRequires>
 				<and>
-					<distro_family op="=" value="Fedorarawhide"/>
+					<distro_family op="=" value="Fedora34"/>
 					<distro_variant op="=" value="Everything"/>
 					<distro_name op="=" value=""/>
 					<distro_arch op="=" value="x86_64"/>
