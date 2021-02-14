@@ -1,7 +1,7 @@
 <job retention_tag="scratch" group="rdma-users">
 	<whiteboard>MLX5 RoCE | Pyverbs sanity </whiteboard>
 	<recipeSet priority="Urgent">
-		<recipe whiteboard="1st machine" role="N1" ks_meta="restraint-rhts beakerlib-redhat' selinux=--disabled" kernel_options="" kernel_options_post="">
+		<recipe whiteboard="1st machine" role="N1" ks_meta="redhat_ca_cert harness='restraint-rhts beakerlib-redhat' selinux=--disabled" kernel_options="" kernel_options_post="">
 			<autopick random="false"/>
 			<watchdog panic="ignore"/>
 			<packages>
@@ -52,7 +52,7 @@
 			</task>
 			<task name="/kernel/infiniband/pyverbs-tests"/>
 		</recipe>
-		<recipe whiteboard="2nd machine" role="N2" ks_meta="restraint-rhts beakerlib-redhat' selinux=--disabled" kernel_options="" kernel_options_post="">
+		<recipe whiteboard="2nd machine" role="N2" ks_meta="redhat_ca_cert harness='restraint-rhts beakerlib-redhat' selinux=--disabled" kernel_options="" kernel_options_post="">
 			<autopick random="false"/>
 			<watchdog panic="ignore"/>
 			<packages>
